@@ -14,12 +14,14 @@ public class UserModel {
   private @Id @GeneratedValue @Column(name = "id") Long id;
   private String name;
   private String role;
+  private String other;
 
-  UserModel() {}
+  public UserModel() {}
 
   public UserModel(String name, String role) {
     this.name = name;
     this.role = role;
+    this.other = null;
   }
 
   public Long getId() {
@@ -32,6 +34,14 @@ public class UserModel {
 
   public String getRole() {
     return this.role;
+  }
+
+  public String getOther() {
+    return this.other;
+  }
+
+  public void setOther(String other) {
+    this.other = other;
   }
 
   public void setId(Long id) {
